@@ -1,11 +1,11 @@
 
-import React, { useState } from 'react'
-import Tasks from './departments/Tasks.jsx'
-import Goals from './departments/Goals.jsx'
-import Projects from './departments/Projects.jsx'
-import Writing from './departments/Writting.jsx'
-import Notes from './departments/Notes.jsx'
-import Business from './departments/Business.jsx'
+import Tasks from './departments/tasks.jsx'
+import Goals from './departments/goals.jsx'
+import Projects from './departments/projects.jsx'
+import Writing from './departments/writting.jsx'
+import Notes from './departments/notes.jsx'
+import Business from './departments/business.jsx'
+
 
 const DEPARTMENTS = [
   { id: 'tasks', name: 'Tasks', icon: '▣' },
