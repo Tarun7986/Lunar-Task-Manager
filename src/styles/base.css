@@ -1,0 +1,85 @@
+/* ============================================
+   base.css  –  Colors, theme, reset
+   ============================================ */
+
+:root {
+  --bg: #05070a;
+  --bg-2: #0a0e14;
+  --panel: #0d1117;
+  --border: #1a2332;
+  --text: #c9d1d9;
+  --muted: #6e7681;
+  --green: #3fb950;
+  --green-dim: #238636;
+  --cyan: #58a6ff;
+  --yellow: #d29922;
+  --red: #f85149;
+  --purple: #a371f7;
+  --glow: 0 0 12px rgba(63, 185, 80, 0.35);
+  --font: 'JetBrains Mono', 'Share Tech Mono', ui-monospace, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font);
+  font-size: 13px;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* subtle scanline */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.12) 2px,
+    rgba(0, 0, 0, 0.12) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--green-dim);
+  color: #fff;
+}
+/* Extra terminal atmosphere */
+body {
+  background-image: 
+    radial-gradient(ellipse at top, rgba(63, 185, 80, 0.03), transparent 60%);
+}
+
+.prompt {
+  text-shadow: 0 0 6px rgba(63, 185, 80, 0.5);
+}
